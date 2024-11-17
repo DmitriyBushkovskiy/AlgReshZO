@@ -268,7 +268,7 @@ namespace AlgReshZO
         double GetAlpha(Dictionary<char, double> values, Dictionary<char, double> antiGrad)
         {
             int total = 0;
-            double eps = 0.001, delta = 0.001;
+            double delta = eps;
             double x1, x2, y1, y2;
             double a = -10000, b = 10000;
             while ((b - a) > 2 * eps)
