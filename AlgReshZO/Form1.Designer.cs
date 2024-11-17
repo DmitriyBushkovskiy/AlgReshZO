@@ -34,6 +34,7 @@ namespace AlgReshZO
             button2 = new Button();
             textBox1 = new RichTextBox();
             textBox2 = new RichTextBox();
+            textBox3 = new RichTextBox();
             richTextBox1 = new RichTextBox();
             label1 = new Label();
             label2 = new Label();
@@ -71,7 +72,7 @@ namespace AlgReshZO
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(14, 31);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(847, 35);
+            textBox1.Size = new Size(700, 35);
             textBox1.TabIndex = 1;
             textBox1.Text = exp;
             textBox1.TextChanged += TextBox1_TextChanged;
@@ -88,9 +89,21 @@ namespace AlgReshZO
             textBox2.Text = "";
             textBox2.TextChanged += TextBox2_TextChanged;
             // 
+            // textBox3
+            // 
+            textBox3.Anchor = AnchorStyles.Top;
+            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(746, 31);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(100, 35);
+            textBox3.TabIndex = 1;
+            textBox3.Text = "0.001";
+            textBox3.TextChanged += TextBox3_TextChanged;
+            // 
             // richTextBox1
             // 
             richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             richTextBox1.Location = new Point(4, 233);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
@@ -98,11 +111,11 @@ namespace AlgReshZO
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "Результат выполнения расчета";
             richTextBox1.TextChanged += RichTextBox1_TextChanged;
-            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(14, 9);
             label1.Name = "label1";
             label1.Size = new Size(104, 15);
@@ -113,6 +126,7 @@ namespace AlgReshZO
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(14, 82);
             label2.Name = "label2";
             label2.Size = new Size(0, 15);
@@ -122,6 +136,7 @@ namespace AlgReshZO
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(14, 111);
             label3.Name = "label3";
             label3.Size = new Size(0, 15);
@@ -139,6 +154,7 @@ namespace AlgReshZO
             // 
             // button3
             // 
+            button3.Enabled = false;
             button3.Location = new Point(270, 170);
             button3.Name = "button3";
             button3.Size = new Size(112, 57);
@@ -161,6 +177,7 @@ namespace AlgReshZO
             Controls.Add(richTextBox1);
             Controls.Add(textBox1);
             Controls.Add(textBox2);
+            Controls.Add(textBox3);
             Controls.Add(button1);
             Controls.Add(button2);
             Controls.Add(button3);
@@ -177,6 +194,7 @@ namespace AlgReshZO
         private Button button2;
         private RichTextBox textBox1;
         private RichTextBox textBox2;
+        private RichTextBox textBox3;
         private RichTextBox richTextBox1;
         private Font font = new Font(SystemFonts.MessageBoxFont.FontFamily, 12);
         private bool isButton2Enabled = false;

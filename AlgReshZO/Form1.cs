@@ -90,7 +90,13 @@ namespace AlgReshZO
 
         }
 
+        private void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+            eps = Double.Parse(textBox3.Text.Replace('.', ','));
+        }
+
         public static string exp = "3*x^2+y^2+7*z^2+x*y-2*y*z+8*x-6*y-6*z+1";
+        public static double eps = 0.1;
         public static Dictionary<char, double> chars;
 
         public bool CheckFormula(string expression)
@@ -120,7 +126,6 @@ namespace AlgReshZO
         public void Calculate()
         {
             License.iConfirmCommercialUse("Garik");
-            var eps = 0.001;
             var k = 0;
 
             var previousSk = new Dictionary<char, double>();
